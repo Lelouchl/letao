@@ -1,0 +1,125 @@
+@mainColor: #006699;
+
+html,body {
+    height: 100%;
+}
+body {
+    padding: 45px 0;
+}
+
+/*------------------------------初始化------------------------------*/
+* {
+    padding: 0;
+    margin: 0;
+    //移动端一般都要写
+    box-sizing: border-box;
+    //清除按住a标签高亮背景
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+li {
+    list-style: none;
+}
+input {
+    border: none;
+    outline: none;
+}
+img {
+    border: none;
+    //去图片底部间隙
+    vertical-align: middle;
+}
+a {
+    text-decoration: none;
+    color: #666;
+}
+.clearfix::after {
+    content: '';
+    display: block;
+    clear: both;
+}
+.fl {
+    float: left;
+}
+.fr {
+    float: right;
+}
+
+.bt {
+    border-top: 1px solid #ccc;
+}
+.br {
+    border-right: 1px solid #ccc;
+}
+.bb {
+    border-bottom: 1px solid #ccc;
+}
+.bl {
+    border-left: 1px solid #ccc;
+}
+
+
+/*------------------------------头部------------------------------*/
+#header {
+    height: 45px;
+    width: 100%;
+    position: fixed;
+    z-index: 999;
+    top: 0;
+    background-color: @mainColor;
+    >h4 {
+        color: #fff;
+        line-height: 45px;
+        text-align: center;
+        margin: 0;
+        font-weight: normal;
+    }
+    >a {
+        color: #fff;
+        &.fa-search {
+            position: absolute;
+            width: 45px;
+            height: 45px;
+            top: 0;
+            right: 0;
+            text-align: center;
+            line-height: 45px;
+            margin: 0 10px;
+        }
+    }
+}
+
+/*------------------------------主体------------------------------*/
+#main {
+
+}
+
+/*------------------------------底部------------------------------*/
+#footer {
+    height: 45px;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    background-color: @mainColor;
+    z-index: 999;
+    .mui-row {
+        >div {
+            &.active {
+                >a {
+                    color: orange;
+                }
+            }
+            >a {
+                padding-top: 5px;
+                color: #fff;
+                text-align: center;
+                display: block;
+                >i {
+                    display: block;
+                }
+                >span {
+                    font-size: 12px;
+                }
+            }
+        }
+    }
+}
